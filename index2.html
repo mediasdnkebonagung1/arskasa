@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita SDN Kebonagung 1 Sukodono</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #FAF7F2;
+      --surface-color: #FFFFFF;
+      --text-color: #2C2418;
+      --accent-color: #B8860B;
+      --secondary-color: #5C6B4F;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .article-font-heading {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    .article-font-body {
+      font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+    }
+
+    .news-wrapper {
+      background-color: var(--bg-color);
+      min-height: 100%;
+      width: 100%;
+    }
+
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(184,134,11,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(92,107,79,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(184,134,11,0.04) 0%, transparent 50%);
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 3.8em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.06em;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+
+    .quote-border {
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .divider-ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .divider-ornament::before,
+    .divider-ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+      opacity: 0.3;
+    }
+
+    .tag-badge {
+      background-color: var(--secondary-color);
+      color: #fff;
+    }
+
+    .fade-in {
+      animation: fadeUp 0.7s ease-out both;
+    }
+
+    .fade-in-d1 { animation-delay: 0.1s; }
+    .fade-in-d2 { animation-delay: 0.2s; }
+    .fade-in-d3 { animation-delay: 0.35s; }
+    .fade-in-d4 { animation-delay: 0.5s; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .photo-frame {
+      background: var(--surface-color);
+      border: 1px solid rgba(44, 36, 24, 0.08);
+      box-shadow: 0 4px 24px rgba(44, 36, 24, 0.06);
+    }
+
+    .sidebar-card {
+      background: var(--surface-color);
+      border: 1px solid rgba(44, 36, 24, 0.07);
+    }
+
+    .progress-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+      z-index: 100;
+      transition: width 0.15s ease-out;
+    }
+
+    .gallery-img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(44,36,24,0.12);
+    }
+
+    @media (max-width: 768px) {
+      .drop-cap::first-letter {
+        font-size: 3em;
+      }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="progress-bar" class="progress-line" style="width: 0%;"></div>
+  <div class="news-wrapper overflow-auto" id="news-wrapper"><!-- Top Nav Bar -->
+   <header>
+    <nav class="w-full" style="background-color: var(--surface-color); border-bottom: 1px solid rgba(44,36,24,0.08);">
+     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3"><!-- Logo SVG -->
+       <svg width="36" height="36" viewbox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#B8860B" opacity="0.12" /> <path d="M10 26V12L18 8L26 12V26" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M14 26V18H22V26" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <circle cx="18" cy="14" r="2" fill="#B8860B" />
+       </svg>
+       <div><span class="article-font-heading font-bold text-sm sm:text-base" style="color: var(--text-color);">SDN Kebonagung 1</span> <span class="block text-xs article-font-body" style="color: var(--secondary-color);">Sukodono, Sidoarjo</span>
+       </div>
+      </div><span id="nav-category" class="tag-badge text-xs font-semibold px-3 py-1 rounded-full article-font-body tracking-wide">PENDIDIKAN</span>
+     </div>
+    </nav>
+   </header>
+   <main class="hero-pattern"><!-- Hero Section -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-2">
+     <div class="fade-in">
+      <div class="flex items-center gap-2 mb-4"><span id="hero-category" class="tag-badge text-xs font-semibold px-3 py-1 rounded-full article-font-body tracking-wide">PENDIDIKAN</span> <span class="text-xs article-font-body" style="color: var(--accent-color);">•</span> <span class="text-xs article-font-body" style="color: rgba(44,36,24,0.5);">31 Januari 2026</span>
+      </div>
+      <h1 id="article-title" class="article-font-heading text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4" style="color: var(--text-color); max-width: 820px;">SDN Kebonagung 1 Sukodono Rayakan Hari Jadi Sidoarjo ke-167 dengan Semangat Inklusif dan Berkelanjutan</h1>
+     </div>
+     <div class="fade-in fade-in-d1 flex flex-wrap items-center gap-4 mb-6">
+      <div class="flex items-center gap-2">
+       <div class="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold article-font-body" style="background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));">
+        R
+       </div>
+       <div><span id="author-name" class="text-sm font-semibold article-font-body" style="color: var(--text-color);">Redaksi Sekolah</span> <span id="pub-date" class="block text-xs article-font-body" style="color: rgba(44,36,24,0.5);">31 Januari 2026</span>
+       </div>
+      </div>
+     </div>
+    </div><!-- Featured Image Area -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 mb-8">
+     <div class="fade-in fade-in-d2 photo-frame rounded-2xl overflow-hidden p-2">
+      <div class="rounded-xl overflow-hidden" style="background: linear-gradient(135deg, #e8dcc8 0%, #d4c5a9 30%, #c2b48e 60%, #b8a87a 100%); aspect-ratio: 16/9; position: relative;"><!-- Illustrated scene SVG -->
+<img src="harjasda.jpeg" alt="" srcset="">         <lineargradient id="skyGrad" x1="0" y1="0" x2="0" y2="450">
+          <stop offset="0%" stop-color="#87CEEB" stop-opacity="0.4" />
+          <stop offset="60%" stop-color="#E8DCC8" stop-opacity="0.3" />
+          <stop offset="100%" stop-color="#d4c5a9" />
+         </lineargradient>
+        </defs> <!-- Ground --> <ellipse cx="400" cy="420" rx="500" ry="80" fill="#5C6B4F" opacity="0.2" /> <!-- School building --> <rect x="200" y="160" width="400" height="220" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="2" opacity="0.9" /> <rect x="340" y="300" width="120" height="80" rx="4" fill="#B8860B" opacity="0.3" /> <!-- Roof --> <polygon points="180,165 400,80 620,165" fill="#B8860B" opacity="0.25" /> <polygon points="200,165 400,95 600,165" fill="#B8860B" opacity="0.15" /> <!-- Windows --> <rect x="240" y="200" width="50" height="60" rx="4" fill="#87CEEB" opacity="0.4" stroke="#B8860B" stroke-width="1.5" stroke-opacity="0.3" /> <rect x="320" y="200" width="50" height="60" rx="4" fill="#87CEEB" opacity="0.4" stroke="#B8860B" stroke-width="1.5" stroke-opacity="0.3" /> <rect x="430" y="200" width="50" height="60" rx="4" fill="#87CEEB" opacity="0.4" stroke="#B8860B" stroke-width="1.5" stroke-opacity="0.3" /> <rect x="510" y="200" width="50" height="60" rx="4" fill="#87CEEB" opacity="0.4" stroke="#B8860B" stroke-width="1.5" stroke-opacity="0.3" /> <!-- Flag --> <line x1="400" y1="80" x2="400" y2="40" stroke="#5C6B4F" stroke-width="2" /> <rect x="402" y="42" width="40" height="25" rx="2" fill="#DC2626" opacity="0.7" /> <rect x="402" y="55" width="40" height="12" rx="2" fill="#FFFFFF" opacity="0.7" /> <!-- People (simple) --> <circle cx="280" cy="370" r="8" fill="#B8860B" opacity="0.5" /> <line x1="280" y1="378" x2="280" y2="400" stroke="#B8860B" stroke-width="2" opacity="0.5" /> <circle cx="320" cy="365" r="8" fill="#5C6B4F" opacity="0.5" /> <line x1="320" y1="373" x2="320" y2="395" stroke="#5C6B4F" stroke-width="2" opacity="0.5" /> <circle cx="480" cy="368" r="8" fill="#B8860B" opacity="0.5" /> <line x1="480" y1="376" x2="480" y2="398" stroke="#B8860B" stroke-width="2" opacity="0.5" /> <circle cx="520" cy="372" r="8" fill="#5C6B4F" opacity="0.5" /> <line x1="520" y1="380" x2="520" y2="402" stroke="#5C6B4F" stroke-width="2" opacity="0.5" /> <!-- Bunting/decorations --> <polyline points="220,155 270,170 320,155 370,170 420,155 470,170 520,155 570,170" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.4" /> <!-- Trees --> <circle cx="120" cy="300" r="40" fill="#5C6B4F" opacity="0.25" /> <rect x="116" y="330" width="8" height="50" fill="#8B7355" opacity="0.3" /> <circle cx="680" cy="310" r="35" fill="#5C6B4F" opacity="0.25" /> <rect x="676" y="335" width="8" height="45" fill="#8B7355" opacity="0.3" /> <!-- Text badge --> <rect x="280" y="130" width="240" height="28" rx="14" fill="#B8860B" opacity="0.15" /> <text x="400" y="149" text-anchor="middle" fill="#B8860B" font-size="12" font-family="Lora, serif" font-weight="600" opacity="0.7">
+         HARI JADI SIDOARJO KE-167
+        </text>
+       </svg><!-- Overlay caption -->
+       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 20px; background: linear-gradient(transparent, rgba(44,36,24,0.5));">
+        <p class="text-white text-xs sm:text-sm article-font-body" style="text-shadow: 0 1px 3px rgba(0,0,0,0.4);">📍 Suasana peringatan Hari Jadi Sidoarjo ke-167 di halaman SDN Kebonagung 1 Sukodono</p>
+       </div>
+      </div>
+     </div>
+    </div><!-- Article Content -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+     <div class="flex flex-col lg:flex-row gap-8"><!-- Main Article -->
+      <article class="fade-in fade-in-d3 flex-1 min-w-0">
+       <div class="article-font-body text-base sm:text-lg leading-relaxed" style="color: var(--text-color);"><!-- Paragraph 1 with Drop Cap -->
+        <p class="drop-cap mb-6"><strong style="color: var(--text-color);">Sidoarjo, 31 Januari 2026</strong> — Suasana penuh semangat dan keceriaan tampak di halaman SDN Kebonagung 1 Sukodono pada Sabtu pagi. Seluruh warga sekolah, mulai dari siswa, guru, hingga orang tua, berkumpul untuk memperingati Hari Jadi Kabupaten Sidoarjo ke-167 yang mengusung tema <em>"Inklusif Berkelanjutan, Sidoarjo Tangguh."</em> Kegiatan ini menjadi momentum penting bagi sekolah untuk menanamkan nilai-nilai cinta daerah, kebersamaan, dan semangat berprestasi kepada para peserta didik.</p><!-- Divider -->
+        <div class="divider-ornament my-8"><span style="color: var(--accent-color); font-size: 18px;">✦</span>
+        </div><!-- Paragraph 2 -->
+        <p class="mb-6">Acara dibuka dengan menyanyikan lagu Indonesia Raya yang dinyanyikan dengan penuh semangat oleh seluruh peserta. Setelah itu, Kepala Sekolah SDN Kebonagung 1 Sukodono, <strong>Mei Ernawati, S.Pd., M.Pd.</strong>, memberikan sambutan pembuka. Dalam sambutannya, beliau menyampaikan rasa syukur atas terselenggaranya kegiatan ini dengan lancar serta mengapresiasi kerja keras seluruh panitia dan dukungan dari para guru dan siswa.</p><!-- Quote 1 -->
+        <blockquote class="quote-border pl-5 py-3 my-8 rounded-r-lg" style="background: rgba(184,134,11,0.04);">
+         <p class="article-font-heading italic text-base sm:text-lg" style="color: var(--text-color);">"Peringatan hari jadi ini bukan sekadar seremonial, tetapi juga menjadi sarana untuk menumbuhkan rasa bangga terhadap daerah dan memperkuat karakter anak-anak agar menjadi generasi yang tangguh dan berdaya saing."</p>
+         <footer class="mt-3 text-sm font-semibold" style="color: var(--accent-color);">
+          — Mei Ernawati, S.Pd., M.Pd., Kepala Sekolah
+         </footer>
+        </blockquote><!-- Paragraph 3 -->
+        <img src="juara.jpeg" alt="" srcset="">
+        <h2 class="article-font-heading text-xl sm:text-2xl font-bold mt-10 mb-4" style="color: var(--text-color);">Ragam Perlombaan Edukatif</h2>
+        <p class="mb-6">Rangkaian kegiatan diisi dengan berbagai perlombaan yang menarik dan edukatif. Siswa-siswi dari berbagai jenjang kelas berpartisipasi dalam lomba bernyanyi, bercerita, menulis cerita, serta menggambar logo Sidoarjo. Setiap lomba dirancang untuk mengasah kreativitas, keberanian, dan kemampuan berpikir kritis anak-anak.</p><!-- Competitions Info Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+         <div class="sidebar-card rounded-xl p-4 text-center"><span class="text-2xl mb-2 block">🎤</span> <span class="text-sm font-semibold article-font-body" style="color: var(--text-color);">Lomba Bernyanyi</span>
+         </div>
+         <div class="sidebar-card rounded-xl p-4 text-center"><span class="text-2xl mb-2 block">📖</span> <span class="text-sm font-semibold article-font-body" style="color: var(--text-color);">Lomba Bercerita</span>
+         </div>
+         <div class="sidebar-card rounded-xl p-4 text-center"><span class="text-2xl mb-2 block">✍️</span> <span class="text-sm font-semibold article-font-body" style="color: var(--text-color);">Menulis Cerita</span>
+         </div>
+         <div class="sidebar-card rounded-xl p-4 text-center"><span class="text-2xl mb-2 block">🎨</span> <span class="text-sm font-semibold article-font-body" style="color: var(--text-color);">Menggambar Logo</span>
+         </div>
+        </div>
+        <p class="mb-6">Suasana kompetisi berlangsung meriah namun tetap menjunjung tinggi sportivitas. Sorak-sorai dukungan dari teman-teman dan guru menambah semangat para peserta untuk menampilkan kemampuan terbaik mereka.</p><!-- Paragraph 4 -->
+        <h2 class="article-font-heading text-xl sm:text-2xl font-bold mt-10 mb-4" style="color: var(--text-color);">Motivasi dari Anggota DPRD</h2>
+        <p class="mb-6">Salah satu momen istimewa dalam acara ini adalah kehadiran <strong>Vike Widya Asroni, S.M.</strong>, anggota DPRD Kabupaten Sidoarjo, yang turut memberikan motivasi kepada para siswa. Dalam sambutannya, beliau menyampaikan apresiasi atas inisiatif sekolah dalam menyelenggarakan kegiatan yang sarat nilai pendidikan dan kebudayaan.</p><!-- Quote 2 -->
+        <blockquote class="quote-border pl-5 py-3 my-8 rounded-r-lg" style="background: rgba(92,107,79,0.05);">
+         <p class="article-font-heading italic text-base sm:text-lg" style="color: var(--text-color);">"Anak-anak SDN Kebonagung 1 Sukodono harus terus semangat belajar, berani bermimpi, dan berusaha menjadi generasi penerus yang tangguh. Sidoarjo membutuhkan anak-anak hebat yang mampu membawa perubahan positif di masa depan."</p>
+         <footer class="mt-3 text-sm font-semibold" style="color: var(--secondary-color);">
+          — Vike Widya Asroni, S.M., Anggota DPRD Kab. Sidoarjo
+         </footer>
+        </blockquote><!-- Paragraph 5 -->
+        <h2 class="article-font-heading text-xl sm:text-2xl font-bold mt-10 mb-4" style="color: var(--text-color);">Penampilan Seni dan Budaya</h2>
+        <p class="mb-6">Selain perlombaan, acara juga dimeriahkan dengan penampilan seni tari dari salah satu siswi, dan juga permainan angklung yang menghasilkan nada yang sangat indah. Penampilan tersebut menambah semarak suasana dan menunjukkan bakat luar biasa yang dimiliki oleh para peserta didik. Guru-guru turut berperan aktif dalam mendampingi dan memberikan dukungan moral kepada anak-anak selama kegiatan berlangsung.</p><!-- Gallery strip -->
+        <div class="grid grid-cols-3 gap-3 my-8">
+         <div class="gallery-img photo-frame rounded-xl overflow-hidden p-1.5 cursor-pointer">
+          <div class="rounded-lg" style="background: linear-gradient(135deg, #d4c5a9, #c2b48e); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;"><span class="text-3xl">💃</span>
+          </div>
+          <p class="text-xs text-center mt-1.5 article-font-body" style="color: rgba(44,36,24,0.5);">Tari Tradisional</p>
+         </div>
+         <div class="gallery-img photo-frame rounded-xl overflow-hidden p-1.5 cursor-pointer">
+          <div class="rounded-lg" style="background: linear-gradient(135deg, #c2b48e, #b8a87a); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;"><span class="text-3xl">📜</span>
+          </div>
+          <p class="text-xs text-center mt-1.5 article-font-body" style="color: rgba(44,36,24,0.5);">Permainan angklung</p>
+         </div>
+         <div class="gallery-img photo-frame rounded-xl overflow-hidden p-1.5 cursor-pointer">
+          <div class="rounded-lg" style="background: linear-gradient(135deg, #b8a87a, #a89868); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;"><span class="text-3xl">🏆</span>
+          </div>
+          <p class="text-xs text-center mt-1.5 article-font-body" style="color: rgba(44,36,24,0.5);">Penyerahan Hadiah</p>
+         </div>
+        </div><!-- Paragraph 6 -->
+        <img src="hadiah.jpeg" alt="" srcset="">
+        <h2 class="article-font-heading text-xl sm:text-2xl font-bold mt-10 mb-4" style="color: var(--text-color);">Pengumuman Pemenang</h2>
+        <p class="mb-6">Menjelang akhir acara, diumumkan para pemenang lomba yang disambut dengan sorak gembira. Para pemenang mendapatkan piagam penghargaan dan hadiah sebagai bentuk apresiasi atas usaha dan kreativitas mereka. Namun, lebih dari sekadar kemenangan, kegiatan ini menjadi ajang pembelajaran berharga tentang kerja keras, kebersamaan, dan semangat pantang menyerah.</p><!-- Paragraph 7 - Closing -->
+        <h2 class="article-font-heading text-xl sm:text-2xl font-bold mt-10 mb-4" style="color: var(--text-color);">Harapan ke Depan</h2>
+        <p class="mb-6">Dalam penutupan acara, Kepala Sekolah Mei Ernawati kembali menyampaikan harapannya agar kegiatan seperti ini dapat terus dilaksanakan setiap tahun.</p>
+        <blockquote class="quote-border pl-5 py-3 my-8 rounded-r-lg" style="background: rgba(184,134,11,0.04);">
+         <p class="article-font-heading italic text-base sm:text-lg" style="color: var(--text-color);">"Semoga kegiatan ini menjadi inspirasi bagi seluruh warga sekolah untuk terus berinovasi dan berkontribusi dalam membangun Sidoarjo yang inklusif, berkelanjutan, dan tangguh."</p>
+         <footer class="mt-3 text-sm font-semibold" style="color: var(--accent-color);">
+          — Mei Ernawati, S.Pd., M.Pd.
+         </footer>
+        </blockquote>
+        <p class="mb-6">Peringatan Hari Jadi Sidoarjo ke-167 di SDN Kebonagung 1 Sukodono tidak hanya menjadi perayaan semata, tetapi juga wujud nyata dari semangat kebersamaan dan kepedulian terhadap daerah. Melalui kegiatan ini, diharapkan lahir generasi muda yang mencintai tanah kelahirannya, berkarakter kuat, serta siap menghadapi tantangan masa depan dengan semangat <strong>Sidoarjo yang Tangguh</strong>.</p><!-- Divider -->
+             <a href="index.html">Kembali ke halaman utama ---></a>
+        <div class="divider-ornament my-10"><span style="color: var(--accent-color); font-size: 18px;">✦</span>
+        </div><!-- Tags -->
+        <div class="flex flex-wrap gap-2 mt-6"><span class="text-xs px-3 py-1.5 rounded-full article-font-body font-medium" style="background: rgba(184,134,11,0.08); color: var(--accent-color);">#HariJadiSidoarjo</span> <span class="text-xs px-3 py-1.5 rounded-full article-font-body font-medium" style="background: rgba(92,107,79,0.08); color: var(--secondary-color);">#SDNKebonagung1</span> <span class="text-xs px-3 py-1.5 rounded-full article-font-body font-medium" style="background: rgba(184,134,11,0.08); color: var(--accent-color);">#Pendidikan</span> <span class="text-xs px-3 py-1.5 rounded-full article-font-body font-medium" style="background: rgba(92,107,79,0.08); color: var(--secondary-color);">#InklusifBerkelanjutan</span> <span class="text-xs px-3 py-1.5 rounded-full article-font-body font-medium" style="background: rgba(184,134,11,0.08); color: var(--accent-color);">#Sukodono</span>
+        </div>
+       </div>
+      </article><!-- Sidebar -->
+      <aside class="w-full lg:w-72 flex-shrink-0">
+       <div class="lg:sticky lg:top-6 space-y-5"><!-- Info Card -->
+        <div class="sidebar-card rounded-2xl p-5 fade-in fade-in-d4">
+         <h3 class="article-font-heading font-bold text-sm mb-4" style="color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.05em;">Informasi Acara</h3>
+         <div class="space-y-3 article-font-body text-sm" style="color: var(--text-color);">
+          <div class="flex items-start gap-3"><span class="text-base mt-0.5">📅</span>
+           <div><span class="font-semibold block">Tanggal</span> <span style="opacity: 0.7;">Sabtu, 31 Januari 2026</span>
+           </div>
+          </div>
+          <div class="flex items-start gap-3"><span class="text-base mt-0.5">📍</span>
+           <div><span class="font-semibold block">Lokasi</span> <span style="opacity: 0.7;">SDN Kebonagung 1 Sukodono</span>
+           </div>
+          </div>
+          <div class="flex items-start gap-3"><span class="text-base mt-0.5">🎯</span>
+           <div><span class="font-semibold block">Tema</span> <span style="opacity: 0.7;">Inklusif Berkelanjutan, Sidoarjo Tangguh</span>
+           </div>
+          </div>
+          <div class="flex items-start gap-3"><span class="text-base mt-0.5">👥</span>
+           <div><span class="font-semibold block">Peserta</span> <span style="opacity: 0.7;">Siswa, Guru, dan Orang Tua</span>
+           </div>
+          </div>
+         </div>
+        </div><!-- Key Figures -->
+        <div class="sidebar-card rounded-2xl p-5 fade-in fade-in-d4">
+         <h3 class="article-font-heading font-bold text-sm mb-4" style="color: var(--secondary-color); text-transform: uppercase; letter-spacing: 0.05em;">Tokoh Utama</h3>
+         <div class="space-y-4 article-font-body text-sm" style="color: var(--text-color);">
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background: linear-gradient(135deg, var(--accent-color), #D4A017);">
+            ME
+           </div>
+           <div><span class="font-semibold block text-sm">Mei Ernawati, S.Pd., M.Pd.</span> <span class="text-xs" style="opacity: 0.6;">Kepala Sekolah</span>
+           </div>
+          </div>
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background: linear-gradient(135deg, var(--secondary-color), #7A8B6C);">
+            VW
+           </div>
+           <div><span class="font-semibold block text-sm">Vike Widya Asroni, S.M.</span> <span class="text-xs" style="opacity: 0.6;">Anggota DPRD Kab. Sidoarjo</span>
+           </div>
+          </div>
+         </div>
+        </div><!-- Quick Highlights -->
+        <div class="sidebar-card rounded-2xl p-5 fade-in fade-in-d4">
+         <h3 class="article-font-heading font-bold text-sm mb-4" style="color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.05em;">Sorotan</h3>
+         <ul class="space-y-2 article-font-body text-sm" style="color: var(--text-color);">
+          <li class="flex items-start gap-2"><span style="color: var(--accent-color); font-weight: bold;">›</span> <span>4 jenis perlombaan diselenggarakan</span></li>
+          <li class="flex items-start gap-2"><span style="color: var(--accent-color); font-weight: bold;">›</span> <span>Penampilan tari tradisional dan angklung</span></li>
+          <li class="flex items-start gap-2"><span style="color: var(--accent-color); font-weight: bold;">›</span> <span>Piagam penghargaan untuk pemenang</span></li>
+          <li class="flex items-start gap-2"><span style="color: var(--accent-color); font-weight: bold;">›</span> <span>Motivasi dari anggota DPRD Sidoarjo</span></li>
+         </ul>
+        </div>
+       </div>
+      </aside>
+     </div>
+    </div>
+   </main><!-- Footer -->
+   <footer style="background-color: var(--surface-color); border-top: 1px solid rgba(44,36,24,0.08);">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6">
+     <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+       <svg width="24" height="24" viewbox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#B8860B" opacity="0.12" /> <path d="M10 26V12L18 8L26 12V26" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M14 26V18H22V26" stroke="#B8860B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <circle cx="18" cy="14" r="2" fill="#B8860B" />
+       </svg><span class="article-font-heading text-sm font-semibold" style="color: var(--text-color);">SDN Kebonagung 1 Sukodono</span>
+      </div>
+      <p class="article-font-body text-xs" style="color: rgba(44,36,24,0.4);">© 2026 SDN Kebonagung 1 Sukodono. Sidoarjo, Jawa Timur.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Reading progress bar
+    const wrapper = document.getElementById('news-wrapper');
+    const progressBar = document.getElementById('progress-bar');
+
+    wrapper.addEventListener('scroll', () => {
+      const scrollTop = wrapper.scrollTop;
+      const scrollHeight = wrapper.scrollHeight - wrapper.clientHeight;
+      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressBar.style.width = Math.min(progress, 100) + '%';
+    });
+
+    // Element SDK setup
+    const defaultConfig = {
+      background_color: '#FAF7F2',
+      surface_color: '#FFFFFF',
+      text_color: '#2C2418',
+      accent_color: '#B8860B',
+      secondary_color: '#5C6B4F',
+      font_family: 'Lora',
+      font_size: 18,
+      article_title: 'SDN Kebonagung 1 Sukodono Rayakan Hari Jadi Sidoarjo ke-167 dengan Semangat Inklusif dan Berkelanjutan',
+      author_name: 'Redaksi Sekolah',
+      publication_date: '31 Januari 2026',
+      category_text: 'PENDIDIKAN'
+    };
+
+    function applyConfig(config) {
+      const c = { ...defaultConfig, ...config };
+
+      // Colors
+      document.documentElement.style.setProperty('--bg-color', c.background_color);
+      document.documentElement.style.setProperty('--surface-color', c.surface_color);
+      document.documentElement.style.setProperty('--text-color', c.text_color);
+      document.documentElement.style.setProperty('--accent-color', c.accent_color);
+      document.documentElement.style.setProperty('--secondary-color', c.secondary_color);
+
+      // Font family
+      const customFont = c.font_family || defaultConfig.font_family;
+      const headingStack = `${customFont}, Georgia, serif`;
+      const bodyStack = `'Source Sans 3', 'Segoe UI', sans-serif`;
+
+      document.querySelectorAll('.article-font-heading').forEach(el => {
+        el.style.fontFamily = headingStack;
+      });
+
+      // Font size
+      const base = c.font_size || defaultConfig.font_size;
+      const articleBody = document.querySelector('article .article-font-body');
+      if (articleBody) articleBody.style.fontSize = base + 'px';
+
+      document.querySelectorAll('article h2').forEach(el => {
+        el.style.fontSize = (base * 1.4) + 'px';
+      });
+
+      // Text content
+      const titleEl = document.getElementById('article-title');
+      if (titleEl) {
+        titleEl.textContent = c.article_title;
+        titleEl.style.fontSize = '';
+      }
+
+      const authorEl = document.getElementById('author-name');
+      if (authorEl) authorEl.textContent = c.author_name;
+
+      const dateEl = document.getElementById('pub-date');
+      if (dateEl) dateEl.textContent = c.publication_date;
+
+      const heroCat = document.getElementById('hero-category');
+      if (heroCat) heroCat.textContent = c.category_text;
+
+      const navCat = document.getElementById('nav-category');
+      if (navCat) navCat.textContent = c.category_text;
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          applyConfig(config);
+        },
+        mapToCapabilities: (config) => {
+          const c = { ...defaultConfig, ...config };
+          return {
+            recolorables: [
+              {
+                get: () => c.background_color,
+                set: (v) => { c.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+              },
+              {
+                get: () => c.surface_color,
+                set: (v) => { c.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+              },
+              {
+                get: () => c.text_color,
+                set: (v) => { c.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+              },
+              {
+                get: () => c.accent_color,
+                set: (v) => { c.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); }
+              },
+              {
+                get: () => c.secondary_color,
+                set: (v) => { c.secondary_color = v; window.elementSdk.setConfig({ secondary_color: v }); }
+              }
+            ],
+            borderables: [],
+            fontEditable: {
+              get: () => c.font_family || defaultConfig.font_family,
+              set: (v) => { c.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+            },
+            fontSizeable: {
+              get: () => c.font_size || defaultConfig.font_size,
+              set: (v) => { c.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+            }
+          };
+        },
+        mapToEditPanelValues: (config) => {
+          const c = { ...defaultConfig, ...config };
+          return new Map([
+            ['article_title', c.article_title],
+            ['author_name', c.author_name],
+            ['publication_date', c.publication_date],
+            ['category_text', c.category_text]
+          ]);
+        }
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ce5d000a6917d66',t:'MTc3MTE2OTA3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

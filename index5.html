@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Layanan ASN &amp; GTK</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .icon-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .pattern-bg {
+      background-image: url(gambar1.png);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+    
+    .pattern-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 64, 175, 0.3) 100%);
+      pointer-events: none;
+    }
+    
+    .glow-effect {
+      box-shadow: 0 0 40px -10px currentColor;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full overflow-auto">
+  <div id="app-wrapper" class="w-full min-h-full pattern-bg"><!-- Header -->
+   <header class="w-full py-6 px-4 relative z-10">
+    <div class="max-w-6xl mx-auto">
+     <h1 id="main-title" class="text-3xl md:text-4xl font-bold mb-2 text-white drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Portal Layanan ASN &amp; GTK</h1>
+     <p id="subtitle" class="text-sm md:text-base text-white drop-shadow-lg" style="text-shadow: 0 1px 6px rgba(0,0,0,0.3);">Akses cepat ke berbagai layanan digital</p>
+          <a href="index.html" class="text-sm md:text-base text-white drop-shadow-lg" style="text-shadow: 0 1px 6px rgba(0,0,0,0.3);">Kembali ke halaman utama --></p>
+    </div>
+    
+   </header><!-- Main Content -->
+   <main class="w-full px-4 pb-12 relative z-10">
+    <div class="max-w-6xl mx-auto">
+     <!-- Cards Grid -->
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"><!-- E-Buddy Card --> <a href="https://e-buddy.sidoarjokab.go.id" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #1e40af;">E-Buddy</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Sistem informasi kepegawaian Kabupaten Sidoarjo untuk pengelolaan data ASN</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #dbeafe; color: #1e40af;">Sidoarjo</span>
+       </div></a> <!-- MyASN Card --> <a href="https://asndigital.bkn.go.id/" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #059669;">MyASN</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Portal layanan ASN Digital dari BKN untuk akses informasi kepegawaian nasional</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #d1fae5; color: #059669;">BKN</span>
+       </div></a> <!-- Smart ASN Card --> <a href="https://smartasn.sidoarjokab.go.id/" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #7c3aed;">Smart ASN</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Sistem cerdas untuk pengelolaan ASN di lingkungan Pemerintah Kabupaten Sidoarjo</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #ede9fe; color: #7c3aed;">Sidoarjo</span>
+       </div></a> <!-- SIMPKB Card --> <a href="https://gtk.belajar.kemendikdasmen.go.id/" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #d97706;">SIMPKB</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Sistem Informasi Manajemen Pengembangan Keprofesian Berkelanjutan untuk GTK</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #fef3c7; color: #d97706;">Kemendikdasmen</span>
+       </div></a> <!-- Info GTK Card --> <a href="https://info.gtk.kemendikdasmen.go.id/info" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #dc2626;">Info GTK</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Portal informasi resmi Guru dan Tenaga Kependidikan dari Kemendikdasmen</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #fee2e2; color: #dc2626;">Kemendikdasmen</span>
+       </div></a> <!-- Ruang GTK Card --> <a href="https://guru.kemendikdasmen.go.id" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #0891b2;">Ruang GTK</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Platform pengembangan profesi dan komunitas untuk Guru dan Tenaga Kependidikan</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #cffafe; color: #0891b2;">Kemendikdasmen</span>
+       </div></a> <!-- KTA PGRI Card --> <a href="https://ktadigitalpgri.org/" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4z"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #be185d;">KTA PGRI</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Kartu Tanda Anggota Digital PGRI untuk verifikasi keanggotaan organisasi guru</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #fbcfe8; color: #be185d;">PGRI</span>
+       </div></a> <!-- TAPERA Card --> <a href="https://sitara.tapera.go.id/peserta/login" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m2-2l6.414-6.414a2 2 0 012.828 0L19 9m-6 6l6.414 6.414a2 2 0 01-2.828 2.828L9 15m6 0l-6-6"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #0d9488;">TAPERA</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Tabungan Perumahan Rakyat - Program tabungan untuk pembiayaan rumah bagi ASN dan pensiunan</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #ccfbf1; color: #0d9488;">Perumahan</span>
+       </div></a> <!-- SIPEKAT Card --> <a href="https://share.google/yTJrBqozQvW6b5R77" target="_blank" rel="noopener noreferrer" class="card-hover block rounded-3xl p-6 border-2 group" style="background-color: #ffffff; border-color: #e5e7eb;">
+       <div class="flex items-start justify-between mb-4">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m0 0l8-4m-8 4v10l8 4m0-10l8 4m0-10v10l-8 4m8-4l-8-4"></path>
+         </svg>
+        </div>
+        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" style="color: #9ca3af;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+       </div><h3 class="text-xl font-bold mb-2" style="color: #1e293b;">SIPEKAT</h3><p class="text-sm leading-relaxed" style="color: #6b7280;">Sistem Pelaporan Ketenagakerjaan - Pengelolaan data ketenagakerjaan Kabupaten Sidoarjo</p>
+       <div class="mt-4 pt-4 border-t" style="border-color: #f3f4f6;"><span class="text-xs font-medium px-3 py-1 rounded-full" style="background-color: #e2e8f0; color: #1e293b;">Sidoarjo</span>
+       </div></a>
+     </div><!-- Info Banner -->
+     <div class="mt-10 rounded-2xl p-6 border" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%); border-color: rgba(99, 102, 241, 0.2);">
+      <div class="flex flex-col md:flex-row items-center gap-4">
+       <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color: rgba(99, 102, 241, 0.1);">
+        <svg class="w-6 h-6" style="color: #6366f1;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+       </div>
+       <div class="text-center md:text-left">
+        <p class="font-semibold mb-1" style="color: #4338ca;">Petunjuk Penggunaan</p>
+        <p class="text-sm" style="color: #6b7280;">Klik pada kartu layanan untuk membuka halaman di tab baru. Pastikan Anda sudah memiliki akun untuk mengakses setiap layanan.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main><!-- Footer -->
+   <footer class="w-full py-6 px-4 border-t" style="background-color: rgba(255, 255, 255, 0.5); border-color: #e5e7eb;">
+    <div class="max-w-6xl mx-auto text-center">
+     <p id="footer-text" class="text-sm" style="color: #6b7280;">© 2025 Portal Layanan ASN &amp; GTK - Kabupaten Sidoarjo</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      main_title: "Portal Layanan ASN & GTK",
+      subtitle: "Akses cepat ke berbagai layanan digital untuk Aparatur Sipil Negara dan Guru Tenaga Kependidikan",
+      footer_text: "© 2025 Portal Layanan ASN & GTK - Kabupaten Sidoarjo",
+      background_color: "#f0f4ff",
+      card_color: "#ffffff",
+      text_color: "#4b5563",
+      primary_color: "#1e40af",
+      accent_color: "#6366f1"
+    };
+
+    async function onConfigChange(config) {
+      const mainTitle = document.getElementById('main-title');
+      const subtitle = document.getElementById('subtitle');
+      const footerText = document.getElementById('footer-text');
+      const appWrapper = document.getElementById('app-wrapper');
+      const cards = document.querySelectorAll('.card-hover');
+
+      if (mainTitle) {
+        mainTitle.textContent = config.main_title || defaultConfig.main_title;
+      }
+      if (subtitle) {
+        subtitle.textContent = config.subtitle || defaultConfig.subtitle;
+      }
+      if (footerText) {
+        footerText.textContent = config.footer_text || defaultConfig.footer_text;
+      }
+      if (appWrapper) {
+        appWrapper.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      }
+      cards.forEach(card => {
+        card.style.backgroundColor = config.card_color || defaultConfig.card_color;
+      });
+      if (subtitle) {
+        subtitle.style.color = config.text_color || defaultConfig.text_color;
+      }
+      if (footerText) {
+        footerText.style.color = config.text_color || defaultConfig.text_color;
+      }
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.card_color || defaultConfig.card_color,
+            set: (value) => {
+              config.card_color = value;
+              window.elementSdk.setConfig({ card_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || 'Plus Jakarta Sans',
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || 16,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["main_title", config.main_title || defaultConfig.main_title],
+        ["subtitle", config.subtitle || defaultConfig.subtitle],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d6dc8d8d33afce4',t:'MTc3MjU5NDg0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
